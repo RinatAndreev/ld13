@@ -141,13 +141,13 @@ public class LZ77T {
 
             try {
                 switch (choice) {
-                    case 1 -> {
+                    case 1: {
                         System.out.print("Enter the file name to compress: ");
                         String infile = scanner.nextLine();
                         lz.compress(infile);
                         System.out.println("File compressed successfully! Saved as: " + infile + ".zip");
                     }
-                    case 2 -> {
+                    case 2: {
                         System.out.print("Enter the file name to decompress (with full extension): ");
                         String infile = scanner.nextLine();
                         System.out.print("Enter the output file name: ");
@@ -155,17 +155,17 @@ public class LZ77T {
                         lz.unCompress(infile, outfile);
                         System.out.println("File decompressed successfully! Saved as: " + outfile);
                     }
-                    case 3 -> {
+                    case 3: {
                         System.out.print("Enter the file name to check size: ");
                         String filename = scanner.nextLine();
                         lz.displayFileSize(filename);
                     }
-                    case 4 -> {
+                    case 4: {
                         System.out.println("Exiting program.");
                         scanner.close();
                         System.exit(0);
                     }
-                    default -> System.out.println("Invalid choice. Please try again.");
+                    default: System.out.println("Invalid choice. Please try again.");
                 }
             } catch (IOException e) {
                 System.out.println("Error: " + e.getMessage());
